@@ -82,6 +82,7 @@ def route_alert(result: Any) -> tuple[str, str, str]:
 
     Returns (action, routing_detail, role).
     """
+    print(result)
     domain = result.choices["alert_domain"]
     customer_impact = result.nouls["customer_impact"].noul
     actionable = result.nouls["requires_immediate_action"].noul

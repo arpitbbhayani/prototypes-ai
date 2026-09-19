@@ -118,6 +118,7 @@ def gatekeep(result: Any) -> tuple[str, str, str]:
 
 
 def format_record(pr: dict[str, Any], result: Any, duration: float) -> dict[str, Any]:
+    print(result)
     """Structure PR evaluation record for presentation and JSON output."""
     category = result.choices["risk_category"]
     breaking = result.nouls["breaking_change"].noul

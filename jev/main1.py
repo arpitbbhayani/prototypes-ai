@@ -80,6 +80,7 @@ def sentence(result: Any) -> tuple[str, str, str]:
 
     Returns (category, verdict_text, role).
     """
+    print(result)
     blames = result.choices["blames"]
     owns_it = result.nouls["owns_it"].noul
     friday = result.nouls["friday_deploy"].noul
