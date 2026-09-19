@@ -240,17 +240,17 @@ class TestUISpinnerAndRun(unittest.TestCase):
         self.assertEqual(ui.run(ctrl_c_fn), 130)
 
     def test_cli_flags_survival(self):
-        import main
-        args1 = main.parse_args(["--json", "judge"])
+        import main1
+        args1 = main1.parse_args(["--json", "judge"])
         self.assertTrue(getattr(args1, "json", False))
 
-        args2 = main.parse_args(["judge", "--json"])
+        args2 = main1.parse_args(["judge", "--json"])
         self.assertTrue(getattr(args2, "json", False))
 
-        args3 = main.parse_args(["--no-color", "docket"])
+        args3 = main1.parse_args(["--no-color", "docket"])
         self.assertTrue(getattr(args3, "no_color", False))
 
-        args4 = main.parse_args(["docket", "--no-color"])
+        args4 = main1.parse_args(["docket", "--no-color"])
         self.assertTrue(getattr(args4, "no_color", False))
 
 
